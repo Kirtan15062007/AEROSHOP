@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroShop | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>AeroShop</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" id="authLink">Login</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to AeroShop</h1>
+        <p>Your One-Stop Marketplace for Fashion, Electronics & More</p>
+        <a href="product.html" class="btn">Explore Products</a>
+    </section>
+
+    <section>
+        <h2>Shop Categories</h2>
+
+        <div class="row">
+
+            <div class="card">
+                <img src="pic7.avif" alt="">
+                <h3>Clothes</h3>
+            </div>
+
+            <div class="card">
+                <img src="pic9.jpg" alt="">
+                <h3>Electronics</h3>
+            </div>
+
+            <div class="card">
+                <img src="pic2.jpg" alt="">
+                <h3>Shoes</h3>
+            </div>
+
+            <div class="card">
+                <img src="watch.jpg" alt="">
+                <h3>Watches</h3>
+            </div>
+
+            <div class="card">
+                <img src="pic8.webp" alt="">
+                <h3>Skin Care</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>🔥 Trending Products</h2>
+
+        
+        <div class="row" id="trendingRow"></div>
+    </section>
+
+    <section>
+        <h2>⭐ Best Sellers</h2>
+
+        <div class="row" id="bestRow"></div>
+    </section>
+
+    <footer>
+        <h3>AeroShop</h3>
+        <p>Fashion • Electronics • Shoes • Watches • Skin Care</p>
+        <p>© 2026 AeroShop. All Rights Reserved.</p>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        // Fill Trending and Best Sellers using product IDs from products.js
+        const trending = [7, 4, 10, 3];
+        const best = [6, 13, 2, 11];
+        document.getElementById("trendingRow").innerHTML = trending.map(id => productCard(getProduct(id))).join("");
+        document.getElementById("bestRow").innerHTML = best.map(id => productCard(getProduct(id))).join("");
+    </script>
+
+</body>
+
+</html>

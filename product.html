@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroShop | Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>AeroShop</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" id="authLink">Login</a>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h1>Our Products</h1>
+        <p>Explore Premium Fashion, Electronics, Shoes, Watches & Skin Care</p>
+    </section>
+
+    <div class="category">
+        <span>Clothes</span>
+        <span>Electronics</span>
+        <span>Shoes</span>
+        <span>Watches</span>
+        <span>Skin Care</span>
+    </div>
+
+    <div class="products" id="productList"></div>
+
+    <footer>
+        <h3>AeroShop</h3>
+        <p>Fashion • Electronics • Shoes • Watches • Skin Care</p>
+        <p>© 2026 AeroShop. All Rights Reserved.</p>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        const list = document.getElementById("productList");
+        const chips = document.querySelectorAll(".category span");
+        let active = "";
+
+        function render() {
+            const items = PRODUCTS.filter(p => !active || p.category === active);
+            list.innerHTML = items.map(productCard).join("");
+        }
+
+        // Click a category chip to filter; click again to show all
+        chips.forEach(chip => chip.addEventListener("click", function () {
+            active = (active === chip.textContent.trim()) ? "" : chip.textContent.trim();
+            chips.forEach(c => c.classList.toggle("chip-active", c.textContent.trim() === active));
+            render();
+        }));
+
+        render();
+    </script>
+
+</body>
+
+</html>

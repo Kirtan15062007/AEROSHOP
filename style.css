@@ -1,0 +1,431 @@
+/* ===========================
+   AEROSHOP - STYLE.CSS
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #222;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background: #111;
+    color: #D4AF37;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    flex-wrap: wrap;
+}
+
+header h2 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #D4AF37;
+}
+
+/* ---------- Hero ---------- */
+
+.hero,
+.banner {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero h1,
+.banner h1 {
+    color: #D4AF37;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p,
+.banner p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn,
+button {
+    background: #D4AF37;
+    color: #111;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+    text-decoration: none;
+}
+
+button {
+    width: 100%;
+}
+
+.btn:hover,
+button:hover {
+    background: #111;
+    color: #D4AF37;
+    transform: translateY(-3px);
+}
+
+/* ---------- Sections ---------- */
+
+section {
+    padding: 45px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ---------- Products ---------- */
+
+.row,
+.products,
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 220px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .25);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card h3,
+.card h4 {
+    margin: 12px 0 6px;
+}
+
+.type {
+    color: #777;
+    font-size: 14px;
+}
+
+.price {
+    color: #D4AF37;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* ---------- Categories ---------- */
+
+.category {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.category span {
+    display: inline-block;
+    background: #111;
+    color: #D4AF37;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.category span:hover {
+    background: #D4AF37;
+    color: #111;
+}
+
+/* ---------- Container ---------- */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* ---------- About & Contact ---------- */
+
+.container .card,
+.info {
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+    margin-bottom: 25px;
+}
+
+.container .card h2,
+.info h2 {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.container .card p,
+.info p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* ---------- About Feature Boxes ---------- */
+
+.box {
+    width: 220px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+    transition: .3s;
+}
+
+.box h3 {
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+.box:hover {
+    background: #111;
+    color: white;
+    transform: translateY(-6px);
+}
+
+.box:hover p {
+    color: #ddd;
+}
+
+/* ---------- Forms ---------- */
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #D4AF37;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* ---------- Login ---------- */
+
+.login-card {
+    max-width: 420px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ---------- Success Text ---------- */
+
+.success-text {
+    display: none;
+    text-align: center;
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* ---------- Buy Success Banner ---------- */
+
+.success-msg {
+    position: fixed;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #28a745;
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+    transition: .4s;
+    z-index: 999;
+}
+
+.success-msg.show {
+    top: 20px;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+footer h3 {
+    color: #D4AF37;
+    margin-bottom: 8px;
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .hero h1,
+    .banner h1 {
+        font-size: 32px;
+    }
+
+    .row .card,
+    .products .card,
+    .box {
+        width: 90%;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+}
+
+/* =====================================================
+   NEW STYLES (auth + product details) - added at bottom
+===================================================== */
+
+/* Clickable product cards */
+.card-link { display: block; color: inherit; text-decoration: none; }
+
+/* Category chip selected */
+.category span.chip-active { background: #D4AF37; color: #111; }
+
+/* Nav: logged-in greeting */
+nav a#authLink { color: #D4AF37; }
+
+/* Login / Sign up tabs */
+.tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+.tabs button { background: #eee; color: #111; }
+.tabs button.active { background: #D4AF37; }
+
+/* Login messages */
+.form-msg { text-align: center; font-weight: bold; margin-top: 15px; }
+.form-msg.ok { color: #28a745; }
+.form-msg.err { color: #dc3545; }
+
+/* Product details page */
+.back { margin-bottom: 15px; }
+.back a { color: #111; font-weight: bold; text-decoration: none; }
+.back a:hover { color: #D4AF37; }
+
+.detail-wrap {
+    display: flex;
+    gap: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+}
+
+.detail-wrap > img {
+    width: 100%;
+    max-width: 420px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.detail-info { flex: 1; }
+.detail-info h1 { margin: 6px 0 10px; }
+.detail-info .desc { color: #555; line-height: 1.7; margin-bottom: 15px; }
+.rating { margin-bottom: 10px; }
+.features-list { margin: 0 0 20px 20px; line-height: 1.9; color: #444; }
+
+.qty { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.qty button { width: 40px; padding: 8px; }
+.qty span { font-size: 20px; font-weight: bold; min-width: 25px; text-align: center; }
+
+.order-box {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: #e8f7ec;
+    border-radius: 8px;
+    color: #1e7e34;
+    line-height: 1.7;
+}
+.order-box:not(:empty) { display: block; }
+
+@media(max-width:768px) {
+    .detail-wrap { flex-direction: column; padding: 20px; }
+    .detail-wrap > img { max-width: 100%; height: 300px; }
+}

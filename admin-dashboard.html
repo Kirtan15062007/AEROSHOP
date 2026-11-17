@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroShop Admin | Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>AeroShop</h2>
+        <small>Admin Panel</small>
+        <a href="admin-dashboard.html" class="active">📊 Dashboard</a><a href="admin-products.html">📦 Products</a><a href="admin-add-product.html">➕ Add Product</a><a href="admin-orders.html">🧾 Orders</a><a href="admin-users.html">👥 Users</a>
+        <a href="admin-login.html">🚪 Logout</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="main">
+        <div class="topbar">
+            <h1>Dashboard</h1>
+            <div class="who">Welcome, <b>Admin</b></div>
+        </div>
+
+        <div class="stats">
+            <div class="stat"><div class="icon">💰</div><div><p>Total Sales</p><h3>₹4,52,300</h3></div></div>
+            <div class="stat"><div class="icon">🧾</div><div><p>Total Orders</p><h3>128</h3></div></div>
+            <div class="stat"><div class="icon">📦</div><div><p>Products</p><h3>15</h3></div></div>
+            <div class="stat"><div class="icon">👥</div><div><p>Customers</p><h3>86</h3></div></div>
+        </div>
+
+        <div class="panel">
+            <h2>Recent Orders</h2>
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Order ID</th><th>Customer</th><th>Product</th><th>Amount</th><th>Status</th></tr>
+                    <tr><td>#AS1001</td><td>Rahul Shah</td><td>Nike Sneakers</td><td>₹4,999</td><td><span class="badge green">Delivered</span></td></tr>
+<tr><td>#AS1002</td><td>Priya Patel</td><td>Galaxy Phone</td><td>₹24,999</td><td><span class="badge blue">Shipped</span></td></tr>
+<tr><td>#AS1003</td><td>Amit Mehta</td><td>Vitamin C Serum</td><td>₹699</td><td><span class="badge yellow">Pending</span></td></tr>
+<tr><td>#AS1004</td><td>Neha Joshi</td><td>Oversized Hoodie</td><td>₹1,299</td><td><span class="badge green">Delivered</span></td></tr>
+<tr><td>#AS1005</td><td>Karan Desai</td><td>Gaming Laptop</td><td>₹64,999</td><td><span class="badge yellow">Pending</span></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>Top Selling Products</h2>
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Product</th><th>Category</th><th>Sold</th></tr>
+                    <tr><td>Nike Sneakers</td><td>Shoes</td><td>42</td></tr>
+                    <tr><td>Wireless Earbuds</td><td>Electronics</td><td>37</td></tr>
+                    <tr><td>Vitamin C Serum</td><td>Skin Care</td><td>31</td></tr>
+                    <tr><td>Oversized Hoodie</td><td>Clothes</td><td>25</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

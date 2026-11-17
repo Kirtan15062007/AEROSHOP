@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroShop Admin | Manage Orders</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>AeroShop</h2>
+        <small>Admin Panel</small>
+        <a href="admin-dashboard.html">📊 Dashboard</a><a href="admin-products.html">📦 Products</a><a href="admin-add-product.html">➕ Add Product</a><a href="admin-orders.html" class="active">🧾 Orders</a><a href="admin-users.html">👥 Users</a>
+        <a href="admin-login.html">🚪 Logout</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="main">
+        <div class="topbar">
+            <h1>Manage Orders</h1>
+            <div class="who">Welcome, <b>Admin</b></div>
+        </div>
+
+        <div class="panel">
+            <div class="toolbar">
+                <input type="text" placeholder="Search by order ID or customer...">
+                <select>
+                    <option>All Status</option><option>Pending</option><option>Shipped</option>
+                    <option>Delivered</option><option>Cancelled</option>
+                </select>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Order ID</th><th>Customer</th><th>Product</th><th>Amount</th><th>Date</th><th>Status</th><th>Update</th></tr>
+                    <tr><td>#AS1001</td><td>Rahul Shah</td><td>Nike Sneakers</td><td>₹4,999</td><td>10 Nov 2026</td><td><span class="badge green">Delivered</span></td><td><select><option>Delivered</option><option>Pending</option><option>Shipped</option><option>Delivered</option><option>Cancelled</option></select></td></tr>
+<tr><td>#AS1002</td><td>Priya Patel</td><td>Galaxy Phone</td><td>₹24,999</td><td>11 Nov 2026</td><td><span class="badge blue">Shipped</span></td><td><select><option>Shipped</option><option>Pending</option><option>Shipped</option><option>Delivered</option><option>Cancelled</option></select></td></tr>
+<tr><td>#AS1003</td><td>Amit Mehta</td><td>Vitamin C Serum</td><td>₹699</td><td>12 Nov 2026</td><td><span class="badge yellow">Pending</span></td><td><select><option>Pending</option><option>Pending</option><option>Shipped</option><option>Delivered</option><option>Cancelled</option></select></td></tr>
+<tr><td>#AS1004</td><td>Neha Joshi</td><td>Oversized Hoodie</td><td>₹1,299</td><td>10 Nov 2026</td><td><span class="badge green">Delivered</span></td><td><select><option>Delivered</option><option>Pending</option><option>Shipped</option><option>Delivered</option><option>Cancelled</option></select></td></tr>
+<tr><td>#AS1005</td><td>Karan Desai</td><td>Gaming Laptop</td><td>₹64,999</td><td>11 Nov 2026</td><td><span class="badge yellow">Pending</span></td><td><select><option>Pending</option><option>Pending</option><option>Shipped</option><option>Delivered</option><option>Cancelled</option></select></td></tr>
+<tr><td>#AS1006</td><td>Riya Trivedi</td><td>Luxury Watch</td><td>₹5,999</td><td>12 Nov 2026</td><td><span class="badge red">Cancelled</span></td><td><select><option>Cancelled</option><option>Pending</option><option>Shipped</option><option>Delivered</option><option>Cancelled</option></select></td></tr>
+<tr><td>#AS1007</td><td>Jay Vora</td><td>Wireless Earbuds</td><td>₹2,499</td><td>10 Nov 2026</td><td><span class="badge blue">Shipped</span></td><td><select><option>Shipped</option><option>Pending</option><option>Shipped</option><option>Delivered</option><option>Cancelled</option></select></td></tr>
+<tr><td>#AS1008</td><td>Isha Pandya</td><td>Denim Jacket</td><td>₹1,899</td><td>11 Nov 2026</td><td><span class="badge green">Delivered</span></td><td><select><option>Delivered</option><option>Pending</option><option>Shipped</option><option>Delivered</option><option>Cancelled</option></select></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroShop | Product Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>AeroShop</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" id="authLink">Login</a>
+        </nav>
+    </header>
+
+    <div class="container" id="detail"></div>
+
+    <footer>
+        <h3>AeroShop</h3>
+        <p>Fashion • Electronics • Shoes • Watches • Skin Care</p>
+        <p>© 2026 AeroShop. All Rights Reserved.</p>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        // Read ?id=3 from the URL
+        const id = new URLSearchParams(location.search).get("id");
+        const p = getProduct(id);
+        const box = document.getElementById("detail");
+
+        if (!p) {
+            box.innerHTML = '<div class="detail-wrap"><div class="detail-info"><h2 style="text-align:left">Product not found</h2><p><a href="product.html">← Back to products</a></p></div></div>';
+        } else {
+            document.title = "AeroShop | " + p.name;
+            box.innerHTML = `
+            <p class="back"><a href="product.html">← Back to products</a></p>
+            <div class="detail-wrap">
+                <img src="${p.image}" alt="${p.name}" onerror="this.onerror=null;this.src=PLACEHOLDER">
+                <div class="detail-info">
+                    <p class="type">${p.category} • ${p.brand}</p>
+                    <h1>${p.name}</h1>
+                    <p class="rating">⭐ ${p.rating} / 5 &nbsp;|&nbsp; <b>${p.stock}</b></p>
+                    <p class="price" id="totalPrice">${formatPrice(p.price)}</p>
+                    <p class="desc">${p.desc}</p>
+                    <ul class="features-list">${p.features.map(f => "<li>" + f + "</li>").join("")}</ul>
+
+                    <div class="qty">
+                        <button type="button" id="minus">−</button>
+                        <span id="qtyNum">1</span>
+                        <button type="button" id="plus">+</button>
+                    </div>
+
+                    <button id="buyBtn">Buy Now</button>
+                    <div id="orderBox" class="order-box"></div>
+                </div>
+            </div>`;
+
+            let qty = 1;
+            const qtyNum = document.getElementById("qtyNum");
+            function updateQty() {
+                qtyNum.textContent = qty;
+                document.getElementById("totalPrice").textContent = formatPrice(p.price * qty);
+            }
+            document.getElementById("minus").onclick = () => { if (qty > 1) { qty--; updateQty(); } };
+            document.getElementById("plus").onclick = () => { if (qty < 10) { qty++; updateQty(); } };
+
+            document.getElementById("buyBtn").onclick = function () {
+                const order = buyNow(p.id, qty);   // redirects to login if needed
+                if (!order) return;
+                document.getElementById("orderBox").innerHTML =
+                    "✅ <b>Order Placed!</b><br>Order ID: " + order.orderId + "<br>" +
+                    order.product + " × " + order.qty + " = " + formatPrice(order.total);
+            };
+        }
+    </script>
+
+</body>
+
+</html>

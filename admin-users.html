@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroShop Admin | Manage Users</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>AeroShop</h2>
+        <small>Admin Panel</small>
+        <a href="admin-dashboard.html">📊 Dashboard</a><a href="admin-products.html">📦 Products</a><a href="admin-add-product.html">➕ Add Product</a><a href="admin-orders.html">🧾 Orders</a><a href="admin-users.html" class="active">👥 Users</a>
+        <a href="admin-login.html">🚪 Logout</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="main">
+        <div class="topbar">
+            <h1>Manage Users</h1>
+            <div class="who">Welcome, <b>Admin</b></div>
+        </div>
+
+        <div class="panel">
+            <div class="toolbar"><input type="text" placeholder="Search users..."></div>
+            <div class="table-wrap">
+                <table>
+                    <tr><th>ID</th><th>Name</th><th>Email</th><th>Joined</th><th>Orders</th><th>Status</th><th>Action</th></tr>
+                    <tr><td>1</td><td>Rahul Shah</td><td>rahul@gmail.com</td><td>12 Oct 2026</td><td>5</td><td><span class="badge green">Active</span></td><td><button class="btn small danger" data-action="block">Block</button></td></tr>
+<tr><td>2</td><td>Priya Patel</td><td>priya@gmail.com</td><td>18 Oct 2026</td><td>3</td><td><span class="badge green">Active</span></td><td><button class="btn small danger" data-action="block">Block</button></td></tr>
+<tr><td>3</td><td>Amit Mehta</td><td>amit@gmail.com</td><td>25 Oct 2026</td><td>1</td><td><span class="badge green">Active</span></td><td><button class="btn small danger" data-action="block">Block</button></td></tr>
+<tr><td>4</td><td>Neha Joshi</td><td>neha@gmail.com</td><td>02 Nov 2026</td><td>4</td><td><span class="badge green">Active</span></td><td><button class="btn small danger" data-action="block">Block</button></td></tr>
+<tr><td>5</td><td>Karan Desai</td><td>karan@gmail.com</td><td>06 Nov 2026</td><td>2</td><td><span class="badge green">Active</span></td><td><button class="btn small danger" data-action="block">Block</button></td></tr>
+<tr><td>6</td><td>Riya Trivedi</td><td>riya@gmail.com</td><td>10 Nov 2026</td><td>0</td><td><span class="badge green">Active</span></td><td><button class="btn small danger" data-action="block">Block</button></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
